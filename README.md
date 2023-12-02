@@ -13,7 +13,7 @@ Compilation
 
 Open a terminal in the directory where the program file (B23CH1015_B23ME1002_B23EE1040_B23CY1007.c) is located. Use the following command to compile the program:
 
-gcc .c -o voting_machine
+gcc B23CH1015_B23ME1002_B23EE1040_B23CY1007.c -o voting_machine
 This command will generate an executable file named voting_machine.
 
 Execution
