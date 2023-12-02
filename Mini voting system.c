@@ -34,7 +34,7 @@ int choices()
     printf("4. Result.\n");
     printf("5. Exit.\n");
     printf("Enter choice number: ");
-    scanf("%d", &choice);
+    scanf("%d", &choice);//getting choice number
     return choice;
 }
 //function to add candidates.
@@ -44,7 +44,7 @@ void add_candidates(int no_of_candidates)
     for (int i = 0; i < no_of_candidates; i++)
     {
         printf("Enter name of candidate %d: ", i + 1);
-        scanf("%s", a[candidates_count].name);
+        scanf("%s", a[candidates_count].name);//getting candidates name
 
         printf("Available Symbols: \n");
         //displaying available symbols
@@ -62,7 +62,7 @@ void add_candidates(int no_of_candidates)
 
         if (num <= 0 || num > 13 || symbol_no[num - 1] == 1)
         {
-            printf("This Symbol is not available. Please choose from the available symbols\n");
+            printf("This Symbol is not available. Please choose from the available symbols\n");//shows invalid entry
             num = 0;
             printf("Available Symbols: \n");
             for (int j = 0; j < 13; j++)
