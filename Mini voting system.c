@@ -142,12 +142,13 @@ void show_result()
     int maxvotes_index = -1;
     int winners = 0;
 
+    //finding candidate with maximum vote.
     for (int i = 0; i < candidates_count; i++)
     {
         if (a[i].votes > max_votes)
         {
             max_votes = a[i].votes;
-            maxvotes_index = i;
+            maxvotes_index = i;//finding index of candidate with m aximum vote.
         }
     }
 
@@ -155,16 +156,18 @@ void show_result()
     {
         if (a[i].votes == max_votes)
         {
-            winners++;
+            winners++; //calculating vote.
         }
     }
 
+    //displaying result.
     if (winners > 1)
     {
-        printf("No candidate has majority votes\n");
+        printf("No candidate has majority votes\n");//all candidate got equal votes.
     }
     else if (maxvotes_index != -1)
     {
+        //displaying the winner.
         printf("Candidate %s with symbol %c won with %d votes\n", a[maxvotes_index].name, a[maxvotes_index].symbol, a[maxvotes_index].votes);
     }
     else
