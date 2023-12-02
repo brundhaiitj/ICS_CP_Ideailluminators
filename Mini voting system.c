@@ -64,7 +64,7 @@ void add_candidates(int no_of_candidates)
         {
             printf("This Symbol is not available. Please choose from the available symbols\n");//shows invalid entry
             num = 0;
-            printf("Available Symbols: \n");
+            printf("Available Symbols: \n");//displaying available symbols again
             for (int j = 0; j < 13; j++)
             {
                 if (symbol_no[j] == 1)
@@ -100,7 +100,7 @@ void voting(int no_of_voters)
         printf("Enter age: ");
         scanf("%d", &b[i].age);
 
-        if (b[i].age < 18)
+        if (b[i].age < 18)//checking voters eligibility
         {
             printf("You are not eligible to vote\n");
         }
