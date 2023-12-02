@@ -60,7 +60,7 @@ $ ./voting_machine
 Enter choice number: 1
 
 Enter the number of candidates: 3
-Enter name of candidate 1: John
+Enter name of candidate 1: Alice
 Available Symbols:
 1. !
 2. @
@@ -81,17 +81,23 @@ Enter the symbol number of candidate 1: 1
 
 Enter choice number: 3
 Enter the number of voters: 2
-Enter name of voter 1: Alice
+Enter name of voter 1: Hiro
 Enter age: 25
-1. John
-2. Jane
-3. Bob
+
+Name of candidate number 1: Alice
+Symbol of candidate number 1: !
+
+Name of candidate number 2: Elsa
+Symbol of candidate number 2: $
+
+Name of candidate number 3: Ana
+Symbol of candidate number 3: ~
 Voter 1, please enter your choice (1-3): 2
 
 ...
 
 Enter choice number: 4
-Candidate Jane with symbol @ won with 1 votes
+Candidate Elsa with symbol $ won with 1 votes
 
 ...
 
