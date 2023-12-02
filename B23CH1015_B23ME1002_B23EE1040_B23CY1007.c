@@ -210,13 +210,8 @@ int main()
             }
             break;
         case 4:
-            if (candidates_count > 0){
                 show_result();
-            }
-            else{
-                printf("No candidates available.\n");
                 break;
-            }
         case 5:
             printf("Exiting the program. Thank you!\n");
             break;
