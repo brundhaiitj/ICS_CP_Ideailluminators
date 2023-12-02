@@ -3,16 +3,18 @@
 int no_of_candidates;
 int no_of_voters;
 int candidates_count = 0;
+//array to store all symboles.
 char symbols[25] = {'!', '@', '#', '$', '%', '^', '&', '*', '+', '=', '|', '~', '?'};
-int symbol_no[25] = {0}; // Initialize to zeros
-
+// array to keep track of taken symbol.
+int symbol_no[25] = {0}; 
+//structure to store candidates details.
 struct candidates
 {
     char name[100];
     char symbol;
     int votes;
 };
-
+//structure to store voters details.
 struct voters
 {
     char names[100];
@@ -21,10 +23,11 @@ struct voters
 
 struct candidates a[1000];
 struct voters b[10000];
-
+//function named choices to display choices.
 int choices()
 {
     int choice;
+    //choices available.
     printf("1. Add candidates.\n");
     printf("2. Show candidates.\n");
     printf("3. Vote.\n");
@@ -34,7 +37,7 @@ int choices()
     scanf("%d", &choice);
     return choice;
 }
-
+//function to add candidates.
 void add_candidates(int no_of_candidates)
 {
     int symbol_num;
@@ -44,6 +47,7 @@ void add_candidates(int no_of_candidates)
         scanf("%s", a[candidates_count].name);
 
         printf("Available Symbols: \n");
+        //displaying available symbols
         for (int j = 0; j < 13; j++)
         {
             if (symbol_no[j] == 1)
@@ -52,6 +56,7 @@ void add_candidates(int no_of_candidates)
         }
 
         int num = 0;
+        //getting symbol from user
         printf("Enter the symbol number of candidate %d: ", i + 1);
         scanf("%d", &num);
 
@@ -76,7 +81,7 @@ void add_candidates(int no_of_candidates)
         candidates_count++;
     }
 }
-
+//function to display available candidates (or) candidates list.
 void show_candidates()
 {
     for (int i = 0; i < candidates_count; i++)
@@ -85,7 +90,7 @@ void show_candidates()
         printf("Symbol of candidate number %d: %c\n", i + 1, a[i].symbol);
     }
 }
-
+//function to handle voting.
 void voting(int no_of_voters)
 {
     for (int i = 0; i < no_of_voters; i++)
@@ -129,7 +134,7 @@ void voting(int no_of_voters)
         }
     }
 }
-
+//function to display voting result.
 void show_result()
 {
     int max_votes = 0;
@@ -166,7 +171,7 @@ void show_result()
         printf("No winner\n");
     }
 }
-
+//main function to handle the choices.
 int main()
 {
     int choice;
@@ -201,10 +206,15 @@ int main()
             }
             break;
         case 4:
-            show_result();
-            break;
+            if (candidates_count > 0){
+                show_result();
+            }
+            else{
+                printf("no candidates available.\n");
+                break;
+            }
         case 5:
-            printf("Exiting the program. Goodbye!\n");
+            printf("Exiting the program. Thank you!\n");
             break;
         default:
             printf("Invalid choice. Please enter a valid option.\n");
