@@ -100,18 +100,18 @@ void voting(int no_of_voters)
         printf("Enter age: ");
         scanf("%d", &b[i].age);
 
-        if (b[i].age < 18)//checking voters eligibility.
+        if (b[i].age < 18)//checking voters eligibility
         {
             printf("You are not eligible to vote\n");
         }
-        else if (b[i].age == 0 || b[i].age < 0)//checking age validity.
+        else if (b[i].age == 0 || b[i].age < 0)//checking age validity
         {
             printf("Invalid age\n");
         }
         else
         {
             show_candidates();
-            //getting vote.
+            //getting vote 
             printf("Voter %d, please enter your choice (1-%d): ", i + 1, candidates_count);
             int choice;
             scanf("%d", &choice);
@@ -195,7 +195,7 @@ int main()
             if (candidates_count > 0)
                 show_candidates();
             else
-                printf("No Candidates available\n");
+                printf("No Candidates available.\n");
             break;
         case 3:
             if (candidates_count > 0)
@@ -206,7 +206,7 @@ int main()
             }
             else
             {
-                printf("Add Candidates first\n");
+                printf("No candidates available to vote.Add Candidates first.\n");
             }
             break;
         case 4:
@@ -214,7 +214,7 @@ int main()
                 show_result();
             }
             else{
-                printf("no candidates available.\n");
+                printf("No candidates available.\n");
                 break;
             }
         case 5:
@@ -228,3 +228,4 @@ int main()
 
     return 0;
 }
+//.....END.....
