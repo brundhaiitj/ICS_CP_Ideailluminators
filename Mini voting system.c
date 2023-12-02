@@ -34,7 +34,7 @@ int choices()
     printf("4. Result.\n");
     printf("5. Exit.\n");
     printf("Enter choice number: ");
-    scanf("%d", &choice);//getting choice number
+    scanf("%d", &choice);//getting choice number.
     return choice;
 }
 //function to add candidates.
@@ -44,10 +44,10 @@ void add_candidates(int no_of_candidates)
     for (int i = 0; i < no_of_candidates; i++)
     {
         printf("Enter name of candidate %d: ", i + 1);
-        scanf("%s", a[candidates_count].name);//getting candidates name
+        scanf("%s", a[candidates_count].name);//getting candidates name.
 
         printf("Available Symbols: \n");
-        //displaying available symbols
+        //displaying available symbols.
         for (int j = 0; j < 13; j++)
         {
             if (symbol_no[j] == 1)
@@ -56,15 +56,15 @@ void add_candidates(int no_of_candidates)
         }
 
         int num = 0;
-        //getting symbol from user
+        //getting symbol from user.
         printf("Enter the symbol number of candidate %d: ", i + 1);
         scanf("%d", &num);
 
         if (num <= 0 || num > 13 || symbol_no[num - 1] == 1)
         {
-            printf("This Symbol is not available. Please choose from the available symbols\n");//shows invalid entry
+            printf("This Symbol is not available. Please choose from the available symbols\n");//shows invalid entry.
             num = 0;
-            printf("Available Symbols: \n");//displaying available symbols again
+            printf("Available Symbols: \n");//displaying available symbols again.
             for (int j = 0; j < 13; j++)
             {
                 if (symbol_no[j] == 1)
@@ -100,18 +100,18 @@ void voting(int no_of_voters)
         printf("Enter age: ");
         scanf("%d", &b[i].age);
 
-        if (b[i].age < 18)//checking voters eligibility
+        if (b[i].age < 18)//checking voters eligibility.
         {
             printf("You are not eligible to vote\n");
         }
-        else if (b[i].age == 0 || b[i].age < 0)//checking age validity
+        else if (b[i].age == 0 || b[i].age < 0)//checking age validity.
         {
             printf("Invalid age\n");
         }
         else
         {
             show_candidates();
-            //getting vote 
+            //getting vote.
             printf("Voter %d, please enter your choice (1-%d): ", i + 1, candidates_count);
             int choice;
             scanf("%d", &choice);
