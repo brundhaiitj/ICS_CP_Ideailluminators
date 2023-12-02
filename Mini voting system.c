@@ -104,13 +104,14 @@ void voting(int no_of_voters)
         {
             printf("You are not eligible to vote\n");
         }
-        else if (b[i].age == 0 || b[i].age < 0)
+        else if (b[i].age == 0 || b[i].age < 0)//checking age validity
         {
             printf("Invalid age\n");
         }
         else
         {
             show_candidates();
+            //getting vote 
             printf("Voter %d, please enter your choice (1-%d): ", i + 1, candidates_count);
             int choice;
             scanf("%d", &choice);
