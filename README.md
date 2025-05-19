@@ -1,10 +1,10 @@
-Mini Voting Machine Program - README
+# Mini Voting Machine Program 
 
-Introduction
+## Introduction
 
 This is a simple console-based voting machine program written in C. The program allows users to add candidates, display candidate information, vote, and view the election results.
 
-Environment Setup
+## Environment Setup
 
 To execute the program, make sure you have the following:
 
@@ -16,14 +16,14 @@ Open a terminal in the directory where the program file (B23CH1015_B23ME1002_B23
 gcc B23CH1015_B23ME1002_B23EE1040_B23CY1007.c -o voting_machine
 This command will generate an executable file named voting_machine.
 
-Execution
+## Execution
 
 After successful compilation, run the program using the following command:
 
 ./voting_machine
 This will start the program, and you will be prompted with a menu to choose from different options.
 
-Usage
+## Usage
 
 Adding Candidates (Option 1):
 
@@ -49,7 +49,7 @@ Ensure that the symbols array (char symbols[25]) and the number of symbols in th
 
 The program may need adjustments based on your system's C compiler or any specific requirements.
 
-Example
+## Example
 
 $ ./voting_machine
 1. Add candidates.
