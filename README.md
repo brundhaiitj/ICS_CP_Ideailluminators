@@ -9,10 +9,10 @@ To execute the program, make sure you have the following:
 - GCC (GNU Compiler Collection) installed on your system. You can download it [here](https://gcc.gnu.org/install/index.html).
 
 ## Compilation
-Open a terminal in the directory where the program file (`B23CH1015_B23ME1002_B23EE1040_B23CY1007.c`) is located. Use the following command to compile the program:
+Open a terminal in the directory where the program file (`V_M.c`) is located. Use the following command to compile the program:
 
 ```bash
-gcc B23CH1015_B23ME1002_B23EE1040_B23CY1007.c -o voting_machine
+gcc V_M.c -o voting_machine
 ```
 
 This command will generate an executable file named `voting_machine`.
