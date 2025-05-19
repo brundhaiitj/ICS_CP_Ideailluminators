@@ -1,4 +1,4 @@
-Mini Voting Machine Program - README
+##Mini Voting Machine Program - README
 
 Introduction
 
