@@ -1,4 +1,4 @@
-# Mini Voting Machine Program 
+# Mini Voting Machine 
 
 ## Introduction
 
